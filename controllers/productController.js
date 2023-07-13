@@ -4,12 +4,12 @@ const productService = require('../services/productService')
 const router = Router();
 
 router.get('/', (req,res)=>{
-
+    
     productService.getAll(req.query)
-        .then(products => {
-            res.render('productGrids', { title: 'Browse', products });
-        })
-        .catch(() => res.status(500).end())
+    .then(products => {
+        res.render('productGrids', { title: 'Browse', products });
+    })
+    .catch(() => res.status(500).end())
 });
 
 router.get('/add', (req, res)=>{
@@ -17,7 +17,7 @@ router.get('/add', (req, res)=>{
 });
 
 router.post('/add', (req, res)=>{
-    //console.log(req.body);
+    console.log(req.body);
     productService.create(req.body)
     .then(()=>
     res.redirect('/')

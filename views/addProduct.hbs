@@ -1,58 +1,93 @@
-    <!-- Start Account Register Area -->
-    <div class="account-login section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-12">
-                    <div class="register-form">
-                        <div class="title">
-                            <h3>Add Product</h3>
-                            {{!-- <p>Registration takes less than a minute but gives you full control over your orders.</p> --}}
-                        </div>
-                        <form class="row" method="post">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="reg-fn">Name</label>
-                                    <input class="form-control" name="name" type="text" id="name" required>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="reg-ln">Price</label>
-                                    <input class="form-control" name="price" type="text" id="price" required>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="reg-ln">Description</label>
-                                    <input class="form-control" name="description" type="text" id="description" required>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="reg-phone">Image Url</label>
-                                    <input class="form-control" name="imageUrl" type="text" id="imageUrl" required>
-                                </div>
-                            </div>
-                            
-                            <div class="button">
-                                <button class="btn" type="submit">Create Product</button>
-                            </div>
-                        </form>
+<!-- Start Account Register Area -->
+<div class="account-login section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-12">
+                <div class="register-form">
+                    <div class="title">
+                        <h3>Add Product</h3>
+                        {{!-- <p>Registration takes less than a minute but gives you full control over your orders.</p>
+                        --}}
                     </div>
+                    <form class="row" method="post">
+                        {{!-- <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="reg-fn">Category</label>
+                                <input class="form-control" name="name" type="text" id="category" required>
+                            </div>
+                        </div> --}}
+                        <div >
+                            <p>Category</p>
+                            <div class="input-radio">
+                                <input type="radio" id="choice1" name="category" value="Toys">
+                                <label for="choice1">Toys</label>
+
+                                <input type="radio" id="clothes" name="category" value="Clothes">
+                                <label for="choice2">Clothes</label>
+
+                                <input type="radio" id="blankets" name="category" value="blankets">
+                                <label for="blankets">Blankets</label>
+
+                                <input type="radio" id="carpets" name="category" value="Carpets">
+                                <label for="carpets">Carpets</label>
+
+                                <input type="radio" id="bags" name="category" value="Bags">
+                                <label for="bags">Bags</label>
+
+                                <input type="radio" id="hats" name="category" value="Hats">
+                                <label for="hats">Hats</label><br>
+
+                                <input type="radio" id="accessories" name="category" value="Accessories">
+                                <label for="accessories">Accessories</label>
+
+                                <input type="radio" id="other" name="other" value="Other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="reg-fn">Name</label>
+                                <input class="form-control" name="name" type="text" id="name" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="reg-ln">Price</label>
+                                <input class="form-control" name="price" type="text" id="price" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="reg-ln">Description</label>
+                                <input class="form-control" name="description" type="text" id="description" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="reg-phone">Image Url</label>
+                                <input class="form-control" name="imageUrl" type="text" id="imageUrl" required>
+                            </div>
+                        </div>
+
+                        <div class="button">
+                            <button class="btn" type="submit">Create Product</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Account Register Area -->
+</div>
+<!-- End Account Register Area -->
 
-    <!-- ========================= scroll-top ========================= -->
-    <a href="#" class="scroll-top">
-        <i class="lni lni-chevron-up"></i>
-    </a>
+<!-- ========================= scroll-top ========================= -->
+<a href="#" class="scroll-top">
+    <i class="lni lni-chevron-up"></i>
+</a>
 
-    <!-- ========================= JS here ========================= -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/tiny-slider.js"></script>
-    <script src="assets/js/glightbox.min.js"></script>
-    <script src="assets/js/main.js"></script>
+<!-- ========================= JS here ========================= -->
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/tiny-slider.js"></script>
+<script src="assets/js/glightbox.min.js"></script>
+<script src="assets/js/main.js"></script>

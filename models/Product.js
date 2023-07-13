@@ -15,6 +15,12 @@ const productShema = new mongoose.Schema({
       message: `The name should be between 3 and 50 symblos`, // Error message if validation fails
     },
   },
+
+  category: {
+    type: String,
+    required: true,
+  },
+
   price: {
     type: String,
     required: true,
@@ -25,6 +31,7 @@ const productShema = new mongoose.Schema({
       message: 'Only numbers, ".", and "," are allowed.', // Error message if validation fails
     },
   },
+
   description: {
     type: String,
     required: true,
@@ -37,6 +44,7 @@ const productShema = new mongoose.Schema({
       message: 'The description consists invalid string values', // Error message if validation fails
     },
   },
+
   imageUrl: {
     type: String,
     required: true,
@@ -50,8 +58,8 @@ const productShema = new mongoose.Schema({
       },
       message: 'Invalid value for image', // Error message if validation fails
     },
-
   },
+  
   accessories: [{
     type: mongoose.Types.ObjectId,
     ref: 'Accessory'
