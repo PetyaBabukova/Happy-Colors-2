@@ -5,8 +5,11 @@ const router = Router();
 
 router.get('/', (req,res)=>{
 
-    let products = productService.getAll();
-    res.render('productGrids', {products});
+    productService.getAll(req.query)
+        .then(products => {
+            res.render('productGrids', { title: 'Browse', products });
+        })
+        .catch(() => res.status(500).end())
 });
 
 router.get('/add', (req, res)=>{
@@ -20,6 +23,8 @@ router.post('/add', (req, res)=>{
     res.redirect('/')
     )
     .catch(err=> console.log(err))
-})
+});
+
+
 
 module.exports = router;

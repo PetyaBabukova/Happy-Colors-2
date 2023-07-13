@@ -3,7 +3,7 @@ const Product = require('../models/Product');
 async function getAll(query) {
     let products = await Product.find({}).lean();
 
-    return 'products'
+    return products;
 }
 
 function create(data) {
