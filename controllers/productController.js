@@ -4,7 +4,6 @@ const productService = require('../services/productService')
 const router = Router();
 
 router.get('/', (req,res)=>{
-    
     productService.getAll(req.query)
     .then(products => {
         res.render('productGrids', { title: 'Browse', products });
@@ -26,16 +25,18 @@ router.post('/add', (req, res)=>{
 });
 
 router.get('/:category',(req, res)=>{
-// console.log(req.path);
-// console.log(req.body);
+
 let category = req.path.slice(1, req.path.length)
-productService.getAll(req.query, category)
+
+productService.getAllCategories(category)
 .then(products => {
     
     res.render('productGrids', { title: 'Browse', products });
 })
 .catch(() => res.status(500).end())
-})
+});
+
+
 
 
 

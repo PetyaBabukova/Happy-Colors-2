@@ -3,8 +3,8 @@
                         <!-- Start Single Widget -->
                         <div class="single-widget search">
                             <h3>Search Product</h3>
-                            <form action="#">
-                                <input type="text" placeholder="Search Here...">
+                            <form action="/products" method="GET">
+                                <input name="search" type="text" placeholder="Search Here...">
                                 <button type="submit"><i class="lni lni-search-alt"></i></button>
                             </form>
                         </div>
@@ -13,27 +13,17 @@
                         <div class="single-widget">
                             <h3>All Categories</h3>
                             <ul class="list">
-                                <li>
-                                    <a href="product-grids.html">Computers & Accessories </a><span>(1138)</span>
-                                </li>
-                                <li>
-                                    <a href="product-grids.html">Smartphones & Tablets</a><span>(2356)</span>
-                                </li>
-                                <li>
-                                    <a href="product-grids.html">TV, Video & Audio</a><span>(420)</span>
-                                </li>
-                                <li>
-                                    <a href="product-grids.html">Cameras, Photo & Video</a><span>(874)</span>
-                                </li>
-                                <li>
-                                    <a href="product-grids.html">Headphones</a><span>(1239)</span>
-                                </li>
-                                <li>
-                                    <a href="product-grids.html">Wearable Electronics</a><span>(340)</span>
-                                </li>
-                                <li>
-                                    <a href="product-grids.html">Printers & Ink</a><span>(512)</span>
-                                </li>
+                                <li class="nav-item"><a href="/products">Всички</a></li>
+                                            <li class="nav-item"><a href="/products/toys">Играчки</a></li>
+                                            <li class="nav-item"><a href="/products/clothes">Дрехи</a></li>
+                                            <li class="nav-item"><a href="/products/blankets">Одеала</a></li>
+                                            <li class="nav-item"><a href="/products/pillows">Възглавници</a></li>
+                                            <li class="nav-item"><a href="/products/carpets">Килими</a></li>
+                                            <li class="nav-item"><a href="/products/bags">Чанти и раници</a></li>
+                                            <li class="nav-item"><a href="/products/hats">Шапки</a></li>
+                                            <li class="nav-item"><a href="/products/scarfs">Шалове</a></li>
+                                            <li class="nav-item"><a href="/products/accessories">Аксесоари</a></li>
+                                            <li class="nav-item"><a href="/products/others">Други</a></li>
                             </ul>
                         </div>
                         <!-- End Single Widget -->
