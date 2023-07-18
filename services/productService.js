@@ -20,7 +20,9 @@ async function getAll(query) {
     return products;
 }
 
-
+function getOne(id) {
+    return Product.findById(id).lean();
+}
 
 function create(data) {
     let product = new Product(data);
@@ -33,4 +35,5 @@ module.exports = {
     getAll,
     create,
     getAllCategories,
+    getOne,
 }

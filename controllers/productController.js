@@ -11,19 +11,6 @@ router.get('/', (req,res)=>{
     .catch(() => res.status(500).end())
 });
 
-router.get('/add', (req, res)=>{
-    res.render('addProduct');
-});
-
-router.post('/add', (req, res)=>{
-    //console.log(req.body);
-    productService.create(req.body)
-    .then(()=>
-    res.redirect('/')
-    )
-    .catch(err=> console.log(err))
-});
-
 router.get('/:category',(req, res)=>{
 
 let category = req.path.slice(1, req.path.length)
@@ -37,6 +24,13 @@ productService.getAllCategories(category)
 });
 
 
+
+
+
+router.get('/:productId/details', async (req, res)=>{
+    let product = await productService.getOne(req.params.productId)
+    res.render('product-details', {product})
+})
 
 
 

@@ -35,7 +35,7 @@ const productShema = new mongoose.Schema({
   description: {
     type: String,
     required: true,
-    maxlenght: 50,
+    maxlenght: 30,
     validate: {
       validator: (value) => {
         const invalidValues = ['https', 'www', '.js', '<script>', '<img>', 'src', '<', '>', '&', "'", '"', ' /', '\\', ';', '(', ')', '$', '%', '+', '=', '@'];
@@ -45,9 +45,97 @@ const productShema = new mongoose.Schema({
     },
   },
 
-  imageUrl: {
+  details: {
     type: String,
     required: true,
+    maxlenght: 200,
+    validate: {
+      validator: (value) => {
+        const invalidValues = ['https', 'www', '.js', '<script>', '<img>', 'src', '<', '>', '&', "'", '"', ' /', '\\', ';', '(', ')', '$', '%', '+', '=', '@'];
+        return !invalidValues.includes(value);
+      },
+      message: 'The description consists invalid string values', // Error message if validation fails
+    },
+  },
+
+  mainImageUrl: {
+    type: String,
+    required: true,
+    validate: {
+      validator: (value) => {
+        // Custom validation function
+        // Return true if the string is valid, false otherwise
+        // You can define any custom logic here
+        const invalidValues = ['.js', '<script>', '<img>', 'src', '<', '>', '&', "'", '"', ' /', '\\', ';', '(', ')', '$', '%', '+', '=', '@'];
+        return !invalidValues.includes(value);
+      },
+      message: 'Invalid value for image', // Error message if validation fails
+    },
+  },
+
+  image1: {
+    type: String,
+    required: false,
+    validate: {
+      validator: (value) => {
+        // Custom validation function
+        // Return true if the string is valid, false otherwise
+        // You can define any custom logic here
+        const invalidValues = ['.js', '<script>', '<img>', 'src', '<', '>', '&', "'", '"', ' /', '\\', ';', '(', ')', '$', '%', '+', '=', '@'];
+        return !invalidValues.includes(value);
+      },
+      message: 'Invalid value for image', // Error message if validation fails
+    },
+  },
+
+  image2: {
+    type: String,
+    required: false,
+    validate: {
+      validator: (value) => {
+        // Custom validation function
+        // Return true if the string is valid, false otherwise
+        // You can define any custom logic here
+        const invalidValues = ['.js', '<script>', '<img>', 'src', '<', '>', '&', "'", '"', ' /', '\\', ';', '(', ')', '$', '%', '+', '=', '@'];
+        return !invalidValues.includes(value);
+      },
+      message: 'Invalid value for image', // Error message if validation fails
+    },
+  },
+
+  image3: {
+    type: String,
+    required: false,
+    validate: {
+      validator: (value) => {
+        // Custom validation function
+        // Return true if the string is valid, false otherwise
+        // You can define any custom logic here
+        const invalidValues = ['.js', '<script>', '<img>', 'src', '<', '>', '&', "'", '"', ' /', '\\', ';', '(', ')', '$', '%', '+', '=', '@'];
+        return !invalidValues.includes(value);
+      },
+      message: 'Invalid value for image', // Error message if validation fails
+    },
+  },
+
+  image4: {
+    type: String,
+    required: false,
+    validate: {
+      validator: (value) => {
+        // Custom validation function
+        // Return true if the string is valid, false otherwise
+        // You can define any custom logic here
+        const invalidValues = ['.js', '<script>', '<img>', 'src', '<', '>', '&', "'", '"', ' /', '\\', ';', '(', ')', '$', '%', '+', '=', '@'];
+        return !invalidValues.includes(value);
+      },
+      message: 'Invalid value for image', // Error message if validation fails
+    },
+  },
+
+  image5: {
+    type: String,
+    required: false,
     validate: {
       validator: (value) => {
         // Custom validation function
