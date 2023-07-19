@@ -12,7 +12,11 @@
                                 </div>
                                 <div class="images">
                                     {{#if product.image1}}
-                                    <img src="{{product.image1}}" class="img" alt="{{product.name}} additional image" style="opacity: 1;"> 
+                                    <img src="{{product.mainImageUrl}}" class="img" alt="{{product.name}} additional image" style="opacity: 1;"> 
+                                    {{/if}}
+
+                                    {{#if product.image1}}
+                                    <img src="{{product.image1}}" class="img" alt="{{product.name}} additional image" style="opacity: 1;">
                                     {{/if}}
 
                                     {{#if product.image2}}
@@ -20,15 +24,11 @@
                                     {{/if}}
 
                                     {{#if product.image3}}
-                                    <img src="{{product.image3}}" class="img" alt="{{product.name}} additional image" style="opacity: 1;">
+                                    <img src="{{ product.image3}}" class="img" alt="{{product.name}} additional image" style="opacity: 1;">
                                     {{/if}}
 
                                     {{#if product.image4}}
-                                    <img src="{{ product.image4}}" class="img" alt="{{product.name}} additional image" style="opacity: 1;">
-                                    {{/if}}
-
-                                    {{#if product.image5}}
-                                    <img src="{{product.image5}}" class="img" alt="{{product.name}} additional image" style="opacity: 1;">
+                                    <img src="{{product.image4}}" class="img" alt="{{product.name}} additional image" style="opacity: 1;">
                                     {{/if}}
                                 </div>
                             </main>
